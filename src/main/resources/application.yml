@@ -1,0 +1,27 @@
+debug: true
+hibernate:
+    bytecode:
+        use_reflection_optimizer: true
+spring:
+    datasource:
+        password: secret
+        url: jdbc:postgresql://localhost:5432/mydatabase
+        username: myuser
+    jpa:
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                globally_quoted_identifiers: true
+                globally_quoted_identifiers_skip_column_definitions: true
+                dialect: org.hibernate.dialect.PostgreSQLDialect
+                jdbc:
+                    lob:
+                        non_contextual_creation: true
+    output:
+        ansi:
+            enabled: always
+my:
+    app:
+        header: my app header
+        body: my app body
